@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <last_updated>2009-11-30 13:52:40</last_updated>
+    <product tax="19" name="luxus">
+        <element>foo</element>
+    </product>
+    <product tax="7" name="brot">
+        <element>bar</element>
+    </product>
+</products>

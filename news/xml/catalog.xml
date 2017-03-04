@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="cd5.xsl"?>
+<catalog>
+	<cd id="1" sale="true">
+		<title>Empire Burlesque</title>
+		<artist>Bob Dylan</artist>
+		<country>USA</country>
+		<company>Columbia</company>
+		<price>10.90</price>
+		<year>1985</year>
+	</cd>
+	<cd id="2">
+		<title>Nothing's Shocking</title>
+		<artist>Jane's Addiction</artist>
+		<country>USA</country>
+		<company>CBS Records</company>
+		<price>9.90</price>
+		<year>1988</year>
+	</cd>
+	<cd id="3">
+		<title>Greatest Hits</title>
+		<artist>Dolly Parton</artist>
+		<country>USA</country>
+		<company>RCA</company>
+		<price>9.90</price>
+		<year>1982</year>
+	</cd>
+	<cd id="4">
+		<title>Still got the blues</title>
+		<artist>Gary Moore</artist>
+		<country>UK</country>
+		<company>Virgin records</company>
+		<price>10.20</price>
+		<year>1990</year>
+	</cd>
+	<cd id="5" sale="true">
+		<title>All The World's A Stage</title>
+		<artist>Rush</artist>
+		<country>ON</country>
+		<company>Mercury</company>
+		<price>15.95</price>
+		<year>1976</year>
+	</cd>
+	<cd id="6">
+		<title>One night only</title>
+		<artist>Bee Gees</artist>
+		<country>UK</country>
+		<company>Polydor</company>
+		<price>10.90</price>
+		<year>1998</year>
+	</cd>
+	<cd id="7">
+		<title>Sylvias Mother</title>
+		<artist>Dr.Hook</artist>
+		<country>UK</country>
+		<company>CBS</company>
+		<price>8.10</price>
+		<year>1973</year>
+	</cd>
+	<cd id="8">
+		<title>Maggie May</title>
+		<artist>Rod Stewart</artist>
+		<country>UK</country>
+		<company>Pickwick</company>
+		<price>8.50</price>
+		<year>1990</year>
+	</cd>
+	<cd id="9" sale="true">
+		<title>Houses Of The Holy</title>
+		<artist>Led Zeppelin</artist>
+		<country>UK</country>
+		<company>Atlantic</company>
+		<price>10.80</price>
+		<year>1973</year>
+	</cd>
+	<cd id="10" sale="true">
+		<title>Toys In The Attic</title>
+		<artist>Aerosmith</artist>
+		<country>USA</country>
+		<company>Columbia</company>
+		<price>8.70</price>
+		<year>1974</year>
+	</cd>
+	<cd id="11">
+		<title>Led Zeppelin IV</title>
+		<artist>Led Zeppelin</artist>
+		<country>UK</country>
+		<company>Atlantic</company>
+		<price>10.90</price>
+		<year>1971</year>
+	</cd>
+	<cd id="12">
+		<title>Californication</title>
+		<artist>Red Hot Chili Peppers</artist>
+		<country>USA</country>
+		<company>Virgin</company>
+		<price>10.20</price>
+		<year>2002</year>
+	</cd>
+	<cd id="13">
+		<title>For the good times</title>
+		<artist>Kenny Rogers</artist>
+		<country>UK</country>
+		<company>Mucik Master</company>
+		<price>8.70</price>
+		<year>1995</year>
+	</cd>
+	<cd id="14">
+		<title>Rattle And Hum</title>
+		<artist>U2</artist>
+		<country>USA</country>
+		<company>Columbia</company>
+		<price>9.90</price>
+		<year>1988</year>
+	</cd>
+	<cd id="15" sale="true">
+		<title>Tupelo Honey</title>
+		<artist>Van Morrison</artist>
+		<country>UK</country>
+		<company>Polydor</company>
+		<price>8.20</price>
+		<year>1971</year>
+	</cd>
+	<cd id="16">
+		<title>Soulsville</title>
+		<artist>Jorn Hoel</artist>
+		<country>Norway</country>
+		<company>WEA</company>
+		<price>7.90</price>
+		<year>1996</year>
+	</cd>
+	<cd id="17">
+		<title>The very best of</title>
+		<artist>Cat Stevens</artist>
+		<country>UK</country>
+		<company>Island</company>
+		<price>8.90</price>
+		<year>1990</year>
+	</cd>
+	<cd id="18">
+		<title>Stop</title>
+		<artist>Sam Brown</artist>
+		<country>UK</country>
+		<company>A and M</company>
+		<price>8.90</price>
+		<year>1988</year>
+	</cd>
+	<cd id="19">
+		<title>Bridge of Spies</title>
+		<artist>T`Pau</artist>
+		<country>UK</country>
+		<company>Siren</company>
+		<price>7.90</price>
+		<year>1987</year>
+	</cd>
+	<cd id="20" sale="true">
+		<title>Private Dancer</title>
+		<artist>Tina Turner</artist>
+		<country>UK</country>
+		<company>Capitol</company>
+		<price>8.90</price>
+		<year>1983</year>
+	</cd>
+	<cd id="21">
+		<title>Mirror Ball</title>
+		<artist>Sarah McLaughlin</artist>
+		<country>ON</country>
+		<company>Arista</company>
+		<price>9.90</price>
+		<year>2000</year>
+	</cd>
+	<cd id="22">
+		<title>Pavarotti Gala Concert</title>
+		<artist>Luciano Pavarotti</artist>
+		<country>UK</country>
+		<company>DECCA</company>
+		<price>9.90</price>
+		<year>1991</year>
+	</cd>
+	<cd id="23">
+		<title>The dock of the bay</title>
+		<artist>Otis Redding</artist>
+		<country>USA</country>
+		<company>Atlantic</company>
+		<price>7.90</price>
+		<year>1987</year>
+	</cd>
+	<cd id="24">
+		<title>Picture book</title>
+		<artist>Simply Red</artist>
+		<country>EU</country>
+		<company>Elektra</company>
+		<price>7.20</price>
+		<year>1985</year>
+	</cd>
+	<cd id="25">
+		<title>Synchronicity</title>
+		<artist>The Police</artist>
+		<country>UK</country>
+		<company>London</company>
+		<price>7.80</price>
+		<year>1987</year>
+	</cd>
+	<cd id="26">
+		<title>Unchain my heart</title>
+		<artist>Joe Cocker</artist>
+		<country>USA</country>
+		<company>EMI</company>
+		<price>8.20</price>
+		<year>1987</year>
+	</cd>
+</catalog>
