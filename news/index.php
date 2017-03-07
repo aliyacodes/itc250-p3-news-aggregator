@@ -1,5 +1,6 @@
 <?php
 //index.php
+//sessions branch
 
 $file = 'xml/contacts.xml';
 
