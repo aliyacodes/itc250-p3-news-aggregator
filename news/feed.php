@@ -1,17 +1,7 @@
 <?
 //feed.php
 //our simplest example of consuming an RSS feed
-/*
-  $request = "http://news.google.com/news?cf=all&hl=en&pz=1&ned=us&q=star+wars&output=rss";
-  $response = file_get_contents($request);
-  $xml = simplexml_load_string($response);
-  print '<h1>' . $xml->channel->title . '</h1>';
-  foreach($xml->channel->item as $story)
-  {
-    echo '<a href="' . $story->link . '">' . $story->title . '</a><br />'; 
-    echo '<p>' . $story->description . '</p><br /><br />';
-  }
-*/
+
 
 require '../inc_0700/config_inc.php'; #provides configuration, pathing, error handling, db credentials
 
@@ -57,44 +47,39 @@ if(!isset($_SESSION)){session_start();}
 //    // session started more than 30 minutes ago
 //    session_regenerate_id(true);    // change session ID for the current session and invalidate old session ID
 //    $_SESSION['CREATED'] = time();  // update creation time
+}else{#no records
+	echo '<div align="center">Sorry, there are no records that match this query</div>';
 }
     
     if(isset($_SESSION['Feeds']) && isset($_SESSION['Feeds'][$feedName]))
 {//if session var exists, echo it
-        
-        //dumpDie($_SESSION['Feeds']);
-        
-        
-get_header(); #defaults to header_inc.php
-//        echo 'session was found with the proper feed';
-	echo $_SESSION['Feeds'][$feedName];	
-get_footer(); #defaults to footer_inc.php        
+        get_header(); #defaults to header_inc.php
+        echo $_SESSION['Feeds'][$feedName];	
+        get_footer(); #defaults to footer_inc.php        
 
-}
-    
-//if(isset($_SESSION['Feeds']))
-//{//if session var exists, add to existing
-//	$_SESSION['Feeds'][] = new BallPlayer($_POST['Name'],$_POST['Team'],$_POST['Homers']);	
-//}
-       else{//create new
-    
-    //$_SESSION['Feeds'] = array();
-           
-    $feed = '';
-    
-    
-
+}else{//create new
         
-      $request = 'http://news.google.com/news?cf=all&hl=en&pz=1&ned=us&q=' . $feedDetails["QueryString"] . '&output=rss';
-      $response = file_get_contents($request);
-      $xml = simplexml_load_string($response);
+        $feed = '';
+        $request = 'http://news.google.com/news?cf=all&hl=en&pz=1&ned=us&q=' . $feedDetails["QueryString"] . '&output=rss';
+        $response = file_get_contents($request);
+        $xml = simplexml_load_string($response);
             
+       $feed .= '<p>';
+	   $feed .= 'Feed Name: <b>' . $feedDetails['FeedName'] . '</b><br />';
+	   $feed .= 'Description: <b>' . $feedDetails['FeedDescription'] . '</b><br />';
+	   $feed .= '</p>';
         
-      $feed .= '<h2>' . $feedDetails["CategoryName"] . ' - ' . $xml->channel->title . '</h2>';
+ //     $feed .= '<h2>' . $feedDetails["CategoryName"] . ' - ' . $xml->channel->title . '</h2>';
       foreach($xml->channel->item as $story)
       {
-        $feed .= '<a href="' . $story->link . '">' . $story->title . '</a><br />'; 
-        $feed .= '<p>' . $story->description . '</p><br /><br />';
+          $feed .= '<p>';
+          $feed .= 'Article Title: ' . '<a href="' . $story->link . '">' . $story->title . '</a><br />';
+          $feed .= '</p>';
+          $feed .= '<p>' . $story->description . '</p><br />';
+          
+          
+//        $feed .= '<a href="' . $story->link . '">' . $story->title . '</a><br />'; 
+//        $feed .= '<p>' . $story->description . '</p><br /><br />';
       }
         $_SESSION['Feeds'][$feedName] = $feed;
     
@@ -130,6 +115,6 @@ get_footer(); #defaults to footer_inc.php
 //        
 //    }
     
-}
+//}
 
 ?>
