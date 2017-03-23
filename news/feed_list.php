@@ -16,6 +16,7 @@
 # '../' works for a sub-folder.  use './' for the root
 require '../inc_0700/config_inc.php'; #provides configuration, pathing, error handling, db credentials
 
+
 # check variable of item passed in - if invalid data, forcibly redirect back to demo_list.php page
 if(isset($_GET['catid']) && (int)$_GET['catid'] > 0){#proper data must be on querystring
 	 $catID = (int)$_GET['catid']; #Convert to integer, will equate to zero if fails
@@ -25,6 +26,7 @@ if(isset($_GET['catid']) && (int)$_GET['catid'] > 0){#proper data must be on que
 
 $config->titleTag = smartTitle(); #Fills <title> tag. If left empty will fallback to $config->titleTag in config_inc.php
 $config->metaDescription = smartTitle() . ' - ' . $config->metaDescription; 
+$config->nav1 = array("categories.php"=>"News") + $config->nav1; 
 /*
 $config->metaDescription = 'Web Database ITC281 class website.'; #Fills <meta> tags.
 $config->metaKeywords = 'SCCC,Seattle Central,ITC281,database,mysql,php';
@@ -59,14 +61,10 @@ $sql =
 get_header(); #defaults to header_inc.php
 ?>
 <h3 align="center"><?php echo $config->titleTag; ?></h3>
-<p>This page  is both a test page for your IDB shared mysqli connection, and a starting point for 
- * building DB applications using IDB connections</p>
-<p>creates a singleton (shared) mysqli connection via a class named IDB</p>
 <?php
 #IDB::conn() creates a shareable database connection via a singleton class
 $result = mysqli_query(IDB::conn(),$sql) or die(trigger_error(mysqli_error(IDB::conn()), E_USER_ERROR));
 
-echo '<div align="center"><h4>SQL STATEMENT: <font color="red">' . $sql . '</font></h4></div>';
 if(mysqli_num_rows($result) > 0)
 {#there are records - present data
 	while($row = mysqli_fetch_assoc($result))
